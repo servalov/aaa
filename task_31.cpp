@@ -1,26 +1,26 @@
-//  ООП. Абстракция и инкапсуляция. Задание 1. Адреса
+п»ї//  РћРћРџ. РђР±СЃС‚СЂР°РєС†РёСЏ Рё РёРЅРєР°РїСЃСѓР»СЏС†РёСЏ. Р—Р°РґР°РЅРёРµ 1. РђРґСЂРµСЃР°
 #include <iostream>
 #include <fstream>
 #include <windows.h>
 
-// Объявление класса Address
+// РћР±СЉСЏРІР»РµРЅРёРµ РєР»Р°СЃСЃР° Address
 class Address
 {
 private:
-	std::string town{};          // название города
-	std::string street{};        // название улицы
-	std::string home{};          // номер дома
-	std::string flat{};          // номер квартиры
+	std::string town{};          // РЅР°Р·РІР°РЅРёРµ РіРѕСЂРѕРґР°
+	std::string street{};        // РЅР°Р·РІР°РЅРёРµ СѓР»РёС†С‹
+	std::string home{};          // РЅРѕРјРµСЂ РґРѕРјР°
+	std::string flat{};          // РЅРѕРјРµСЂ РєРІР°СЂС‚РёСЂС‹
 
 public:
 
-	// Конструктор с параметрами
+	// РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ СЃ РїР°СЂР°РјРµС‚СЂР°РјРё
 	Address(std::string setTown, std::string setStreet, std::string setHome, std::string setFlat) : town{ setTown }, street{ setStreet }, home{ setHome }, flat{ setFlat }
 	{};
-	// Конструктор без параметров
+	// РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ Р±РµР· РїР°СЂР°РјРµС‚СЂРѕРІ
 	Address() {};
 
-	// Метод на вывод строки данных
+	// РњРµС‚РѕРґ РЅР° РІС‹РІРѕРґ СЃС‚СЂРѕРєРё РґР°РЅРЅС‹С…
 	std::string get_output_address()
 	{
 		return town + ", " + street + ", " + home + ", " + flat;
@@ -29,7 +29,8 @@ public:
 
 int main()
 {
-	SetConsoleOutputCP(1251);
+	//SetConsoleOutputCP(1251);
+	SetConsoleOutputCP(CP_UTF8);
 	int num{};
 	std::string town{};
 	std::string street{};
@@ -59,19 +60,19 @@ int main()
 			}
 			else
 			{
-				std::cout << " Ошибка открытия файла out.txt !!!" << std::endl;
+				std::cout << " РћС€РёР±РєР° РѕС‚РєСЂС‹С‚РёСЏ С„Р°Р№Р»Р° out.txt !!!" << std::endl;
 			}
 			fout.close();
 			delete[] a;
 		}
 		else
 		{
-			std::cout << " Ошибка данных файла in.txt !!!" << std::endl;
+			std::cout << " РћС€РёР±РєР° РґР°РЅРЅС‹С… С„Р°Р№Р»Р° in.txt !!!" << std::endl;
 		}
 	}
 	else
 	{
-		std::cout << " Ошибка открытия файла in.txt !!!" << std::endl;
+		std::cout << " РћС€РёР±РєР° РѕС‚РєСЂС‹С‚РёСЏ С„Р°Р№Р»Р° in.txt !!!" << std::endl;
 	}
 	fin.close();
 
